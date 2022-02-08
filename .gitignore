@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+/_prj_msvc2019/*.user
+/.distr
+/.vs
