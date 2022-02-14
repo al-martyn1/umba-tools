@@ -5,8 +5,11 @@
 
 @set OUT_ROOT=.out\msvc2019\x64\Release
 
+@if exist %OUT_ROOT%\umba-brief-scanner.exe   copy /Y %OUT_ROOT%\umba-brief-scanner.exe    %UMBA_TOOLS%\bin\
 @if exist %OUT_ROOT%\umba-make-headers.exe    copy /Y %OUT_ROOT%\umba-make-headers.exe     %UMBA_TOOLS%\bin\
 @if exist %OUT_ROOT%\umba-pretty-headers.exe  copy /Y %OUT_ROOT%\umba-pretty-headers.exe   %UMBA_TOOLS%\bin\
+@if exist %OUT_ROOT%\umba-subst-macros.exe    copy /Y %OUT_ROOT%\umba-subst-macros.exe     %UMBA_TOOLS%\bin\
+
 
 @xcopy /Y /S /E /I /F /R ..\umba-pretty-headers\_distr_conf\conf\*      %UMBA_TOOLS%\conf
 @xcopy /Y /S /E /I /F /R ..\umba-brief-scanner\_distr_conf\conf\*       %UMBA_TOOLS%\conf
