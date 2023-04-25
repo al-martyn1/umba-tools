@@ -26,8 +26,12 @@
 @set DISTR_ROOT=.distr
 @if not exist %DISTR_ROOT% mkdir %DISTR_ROOT%
 
-@set DISTR_NAME=umba-pretty-headers
-@set MAIN_EXE_NAME=%DISTR_NAME%
+@rem umba-tools
+@rem set DISTR_NAME=umba-pretty-headers
+@set DISTR_NAME=umba-tools
+@rem set MAIN_EXE_NAME=%DISTR_NAME%
+@rem set MAIN_EXE_NAME=umba-pretty-headers
+@set MAIN_EXE_NAME=umba-brief-scanner
 @set BUILD_OUTPUT_ROOT=.out\msvc2019
 
 
@@ -68,7 +72,8 @@ goto END
 @if exist %DISTR_ROOT%\%PLATFORM% rd /S /Q %DISTR_ROOT%\%PLATFORM%
 
 @set BUILD_OUTPUT=%BUILD_OUTPUT_ROOT%\%PLATFORM%\%CONFIGURATION%
-@set TARGET_ROOT=%DISTR_ROOT%\%PLATFORM%\%CONFIGURATION%\%MAIN_EXE_NAME%
+@rem set TARGET_ROOT=%DISTR_ROOT%\%PLATFORM%\%CONFIGURATION%\%MAIN_EXE_NAME%
+@set TARGET_ROOT=%DISTR_ROOT%\%PLATFORM%\%CONFIGURATION%\%DISTR_NAME%
 @set RD_ROOT=%DISTR_ROOT%\%PLATFORM%
 @set ZIP_ROOT=%DISTR_ROOT%\%PLATFORM%\%CONFIGURATION%
 
@@ -76,16 +81,17 @@ goto END
 @xcopy /Y /S /E /I /F /R     ..\umba-brief-scanner\_distr_conf\conf\*                                             %TARGET_ROOT%\conf
 @copy /Y                     ..\umba-pretty-headers\_distr_conf\conf\umba-pretty-headers.custom.options           %TARGET_ROOT%\conf\umba-pretty-headers.custom.options.example
 
-@copy %BUILD_OUTPUT%\%MAIN_EXE_NAME%.exe        %TARGET_ROOT%\bin\%MAIN_EXE_NAME%.exe
+@copy %BUILD_OUTPUT%\umba-pretty-headers.exe    %TARGET_ROOT%\bin\umba-pretty-headers.exe
 @copy %BUILD_OUTPUT%\umba-make-headers.exe      %TARGET_ROOT%\bin\umba-make-headers.exe
 @copy %BUILD_OUTPUT%\umba-brief-scanner.exe     %TARGET_ROOT%\bin\umba-brief-scanner.exe
 @copy %BUILD_OUTPUT%\umba-subst-macros.exe      %TARGET_ROOT%\bin\umba-subst-macros.exe
 @copy %BUILD_OUTPUT%\qt_stub.exe             %TARGET_ROOT%\bin\qt_stub.exe
 
-
+@if exist version.txt del version.txt
 @%BUILD_OUTPUT%\%MAIN_EXE_NAME%.exe -v >version.txt
 @set /P VERSION=<version.txt
-@del version.txt
+@echo Version (from version.txt): %VERSION%
+@rem del version.txt
 
 
 set "VCINSTALLDIR=%MSVC2019_VSINSTALLDIR%\VC"
@@ -115,6 +121,7 @@ set CLANG_INCLUDE=G:\llvm-built\msvc2019\x64\Release\lib\clang\13.0.1\include
 @rem Be good zip %DISTR_ROOT%\%ZIPDISTRNAME% -r %ZIP_TARGET_FOLDER%.zip %TARGET_ROOT%
 @rem zip %ZIP_ROOT%\%ZIPDISTRNAME% -r %ZIP_TARGET_FOLDER%.zip %TARGET_ROOT%
 @cd %ZIP_TARGET_FOLDER%
+@echo Calling ZIP: zip %ZIPDISTRNAME% -r %ZIPDISTRNAME% %DISTR_NAME%
 @zip %ZIPDISTRNAME% -r %ZIPDISTRNAME% %DISTR_NAME%
 @move %ZIPDISTRNAME% ..\..
 @cd ..\..\..
