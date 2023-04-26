@@ -1,0 +1,1 @@
+_update_tools.bat > update_tools.log 2>&1
