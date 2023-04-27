@@ -16,6 +16,7 @@ if not exist umba-pretty-headers   git clone %PREFIX%/umba-pretty-headers.git
 if exist umba-pretty-headers\_libs\clone_libs_https.bat call umba-pretty-headers\_libs\clone_libs_https.bat
 
 if not exist umba-sort-headers     git clone %PREFIX%/umba-sort-headers.git
+if exist umba-sort-headers\_libs\clone_libs_https.bat call umba-sort-headers\_libs\clone_libs_https.bat
 
 if not exist umba-subst-macros     git clone %PREFIX%/umba-subst-macros.git
 if exist umba-subst-macros\_libs\clone_libs_https.bat call umba-subst-macros\_libs\clone_libs_https.bat

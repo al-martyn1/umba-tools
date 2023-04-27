@@ -2,6 +2,7 @@
 @call :DO_JOB umba-brief-scanner
 @call :DO_JOB umba-make-headers
 @call :DO_JOB umba-pretty-headers
+@call :DO_JOB umba-sort-headers
 @call :DO_JOB umba-subst-macros
 @cd umba-tools
 @exit /B
