@@ -79,14 +79,18 @@ goto END
 
 @mkdir %TARGET_ROOT%\bin
 @xcopy /Y /S /E /I /F /R  ..\umba-brief-scanner\_distr_conf\conf\*                                      %TARGET_ROOT%\conf
+@xcopy /Y /S /E /I /F /R  ..\umba-enum-gen\_distr_conf\conf\*                                           %TARGET_ROOT%\conf
 @copy /Y                  ..\umba-pretty-headers\_distr_conf\conf\umba-pretty-headers.custom.options    %TARGET_ROOT%\conf\umba-pretty-headers.custom.options.example
 @copy /Y                  ..\umba-sort-headers\_distr_conf\conf\umba-sort-headers.options               %TARGET_ROOT%\conf\umba-sort-headers.options
+@copy /Y                  ..\umba-tabtool\_distr_conf\conf\umba-tabtool.options                         %TARGET_ROOT%\conf\umba-tabtool.options
 
 @copy %BUILD_OUTPUT%\umba-brief-scanner.exe     %TARGET_ROOT%\bin\umba-brief-scanner.exe
+@copy %BUILD_OUTPUT%\umba-enum-gen.exe          %TARGET_ROOT%\bin\umba-enum-gen.exe
 @copy %BUILD_OUTPUT%\umba-make-headers.exe      %TARGET_ROOT%\bin\umba-make-headers.exe
 @copy %BUILD_OUTPUT%\umba-pretty-headers.exe    %TARGET_ROOT%\bin\umba-pretty-headers.exe
 @copy %BUILD_OUTPUT%\umba-sort-headers.exe      %TARGET_ROOT%\bin\umba-sort-headers.exe
 @copy %BUILD_OUTPUT%\umba-subst-macros.exe      %TARGET_ROOT%\bin\umba-subst-macros.exe
+@copy %BUILD_OUTPUT%\umba-tabtool.exe           %TARGET_ROOT%\bin\umba-tabtool.exe
 @copy %BUILD_OUTPUT%\qt_stub.exe                %TARGET_ROOT%\bin\qt_stub.exe
 
 @if exist version.txt del version.txt

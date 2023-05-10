@@ -10,6 +10,9 @@ cd ..
 if not exist umba-brief-scanner    git clone %PREFIX%/umba-brief-scanner.git
 if exist umba-brief-scanner\_libs\clone_libs_https.bat call umba-brief-scanner\_libs\clone_libs_https.bat
 
+if not exist umba-enum-gen         git clone %PREFIX%/umba-enum-gen.git
+if exist umba-enum-gen\_libs\clone_libs_https.bat call umba-enum-gen\_libs\clone_libs_https.bat
+
 if not exist umba-make-headers     git clone %PREFIX%/umba-make-headers.git
 
 if not exist umba-pretty-headers   git clone %PREFIX%/umba-pretty-headers.git
@@ -20,5 +23,8 @@ if exist umba-sort-headers\_libs\clone_libs_https.bat call umba-sort-headers\_li
 
 if not exist umba-subst-macros     git clone %PREFIX%/umba-subst-macros.git
 if exist umba-subst-macros\_libs\clone_libs_https.bat call umba-subst-macros\_libs\clone_libs_https.bat
+
+if not exist umba-tabtool          git clone %PREFIX%/umba-tabtool.git
+if exist umba-tabtool\_libs\clone_libs_https.bat call umba-tabtool\_libs\clone_libs_https.bat
 
 cd umba-tools
