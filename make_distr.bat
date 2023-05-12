@@ -100,8 +100,8 @@ goto END
 %TARGET_ROOT%\bin\umba-sort-headers.exe     --help >%TARGET_ROOT%\doc\cli-help\umba-sort-headers.txt     || goto FAIL
 %TARGET_ROOT%\bin\umba-subst-macros.exe     --help >%TARGET_ROOT%\doc\cli-help\umba-subst-macros.txt     || goto FAIL
 %TARGET_ROOT%\bin\umba-tabtool.exe          --help >%TARGET_ROOT%\doc\cli-help\umba-tabtool.txt          || goto FAIL
-@if exist copy /Y doc\umba-tools-brief-ru.txt %TARGET_ROOT%\doc\umba-tools-brief-ru.txt
-@if exist copy /Y doc\umba-tools-brief-en.txt %TARGET_ROOT%\doc\umba-tools-brief-en.txt
+@if exist doc\umba-tools-brief-ru.txt       copy /Y doc\umba-tools-brief-ru.txt %TARGET_ROOT%\doc\umba-tools-brief-ru.txt
+@if exist doc\umba-tools-brief-en.txt       copy /Y doc\umba-tools-brief-en.txt %TARGET_ROOT%\doc\umba-tools-brief-en.txt
 
 
 @if exist version.txt del version.txt
