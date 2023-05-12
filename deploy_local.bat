@@ -21,7 +21,7 @@ if exist %OUT_ROOT%\umba-make-headers.exe    copy /Y %OUT_ROOT%\umba-make-header
 if exist %OUT_ROOT%\umba-pretty-headers.exe  copy /Y %OUT_ROOT%\umba-pretty-headers.exe   %UMBA_TOOLS%\bin\
 if exist %OUT_ROOT%\umba-sort-headers.exe    copy /Y %OUT_ROOT%\umba-sort-headers.exe     %UMBA_TOOLS%\bin\
 if exist %OUT_ROOT%\umba-subst-macros.exe    copy /Y %OUT_ROOT%\umba-subst-macros.exe     %UMBA_TOOLS%\bin\
-if exist %OUT_ROOT%\umba-tabtool.exe         copy /Y %OUT_ROOT%\umba-tabtool.exe     %UMBA_TOOLS%\bin\
+if exist %OUT_ROOT%\umba-tabtool.exe         copy /Y %OUT_ROOT%\umba-tabtool.exe          %UMBA_TOOLS%\bin\
 
 
 @xcopy /Y /S /E /I /F /R ..\umba-brief-scanner\_distr_conf\conf\*       %UMBA_TOOLS%\conf

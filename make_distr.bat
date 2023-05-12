@@ -26,11 +26,7 @@
 @set DISTR_ROOT=.distr
 @if not exist %DISTR_ROOT% mkdir %DISTR_ROOT%
 
-@rem umba-tools
-@rem set DISTR_NAME=umba-pretty-headers
 @set DISTR_NAME=umba-tools
-@rem set MAIN_EXE_NAME=%DISTR_NAME%
-@rem set MAIN_EXE_NAME=umba-pretty-headers
 @set MAIN_EXE_NAME=umba-brief-scanner
 @set BUILD_OUTPUT_ROOT=.out\msvc2019
 
@@ -92,6 +88,21 @@ goto END
 @copy %BUILD_OUTPUT%\umba-subst-macros.exe      %TARGET_ROOT%\bin\umba-subst-macros.exe
 @copy %BUILD_OUTPUT%\umba-tabtool.exe           %TARGET_ROOT%\bin\umba-tabtool.exe
 @copy %BUILD_OUTPUT%\qt_stub.exe                %TARGET_ROOT%\bin\qt_stub.exe
+
+
+@if not exist %TARGET_ROOT%\doc             mkdir %TARGET_ROOT%\doc
+@if not exist %TARGET_ROOT%\doc\cli-help    mkdir %TARGET_ROOT%\doc\cli-help
+
+%TARGET_ROOT%\bin\umba-brief-scanner.exe    --help >%TARGET_ROOT%\doc\cli-help\umba-brief-scanner.txt    || goto FAIL
+%TARGET_ROOT%\bin\umba-enum-gen.exe         --help >%TARGET_ROOT%\doc\cli-help\umba-enum-gen.txt         || goto FAIL
+%TARGET_ROOT%\bin\umba-make-headers.exe     --help >%TARGET_ROOT%\doc\cli-help\umba-make-headers.txt     || goto FAIL
+%TARGET_ROOT%\bin\umba-pretty-headers.exe   --help >%TARGET_ROOT%\doc\cli-help\umba-pretty-headers.txt   || goto FAIL
+%TARGET_ROOT%\bin\umba-sort-headers.exe     --help >%TARGET_ROOT%\doc\cli-help\umba-sort-headers.txt     || goto FAIL
+%TARGET_ROOT%\bin\umba-subst-macros.exe     --help >%TARGET_ROOT%\doc\cli-help\umba-subst-macros.txt     || goto FAIL
+%TARGET_ROOT%\bin\umba-tabtool.exe          --help >%TARGET_ROOT%\doc\cli-help\umba-tabtool.txt          || goto FAIL
+@if exist copy /Y doc\umba-tools-brief-ru.txt %TARGET_ROOT%\doc\umba-tools-brief-ru.txt
+@if exist copy /Y doc\umba-tools-brief-en.txt %TARGET_ROOT%\doc\umba-tools-brief-en.txt
+
 
 @if exist version.txt del version.txt
 @%BUILD_OUTPUT%\%MAIN_EXE_NAME%.exe -v >version.txt
@@ -177,3 +188,13 @@ set CLANG_INCLUDE=G:\llvm-built\msvc2019\x64\Release\lib\clang\13.0.1\include
 
 :END
 @exit /b
+
+
+:FAIL
+@echo.
+@echo Something goes wrong
+@echo.
+@echo.
+@echo.
+@exit /b 1
+
