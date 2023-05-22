@@ -27,4 +27,7 @@ if exist umba-subst-macros\_libs\clone_libs_https.bat call umba-subst-macros\_li
 if not exist umba-tabtool          git clone %PREFIX%/umba-tabtool.git
 if exist umba-tabtool\_libs\clone_libs_https.bat call umba-tabtool\_libs\clone_libs_https.bat
 
+if not exist umba-tr               git clone %PREFIX%/umba-tr.git
+if exist umba-tr\_libs\clone_libs_https.bat call umba-tr\_libs\clone_libs_https.bat
+
 cd umba-tools

@@ -6,6 +6,7 @@
 @call :DO_JOB umba-sort-headers
 @call :DO_JOB umba-subst-macros
 @call :DO_JOB umba-tabtool
+@call :DO_JOB umba-tr
 @cd umba-tools
 @exit /B
 
