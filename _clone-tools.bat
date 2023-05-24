@@ -7,6 +7,9 @@
 
 cd ..
 
+if not exist umba-2c               git clone %PREFIX%/umba-2c.git
+if exist umba-2c\_libs\clone_libs_https.bat call umba-2c\_libs\clone_libs_https.bat
+
 if not exist umba-brief-scanner    git clone %PREFIX%/umba-brief-scanner.git
 if exist umba-brief-scanner\_libs\clone_libs_https.bat call umba-brief-scanner\_libs\clone_libs_https.bat
 

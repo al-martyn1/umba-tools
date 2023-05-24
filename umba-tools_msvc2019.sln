@@ -14,6 +14,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "_all", "_prj_msvc2019\_all.
 		{102914CC-76E5-4B00-A271-B9C50B312C54} = {102914CC-76E5-4B00-A271-B9C50B312C54}
 		{713FF2D2-8367-4D28-B064-C27B383F34B5} = {713FF2D2-8367-4D28-B064-C27B383F34B5}
 		{E45FFEE8-2B5B-4AA5-9DCE-9F217E9814EB} = {E45FFEE8-2B5B-4AA5-9DCE-9F217E9814EB}
+		{5E409EED-4A41-4430-BC4C-39DF7AEB7566} = {5E409EED-4A41-4430-BC4C-39DF7AEB7566}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qt_stub", "..\umba-pretty-headers\_prj_msvc2019\qt_stub.vcxproj", "{7CA03583-0724-4FED-9A9E-6651F35E42A9}"
@@ -33,6 +34,13 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-enum-gen", "..\umba-enum-gen\_prj_msvc\umba-enum-gen.vcxproj", "{44E9429A-16F8-46A3-8A34-2382214D8D60}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-tr", "..\umba-tr\_prj_msvc\umba-tr.vcxproj", "{3D6DF49F-B8E5-4149-BD3B-66D02D68C200}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "..\umba-2c\_prj_msvc\zlib.vcxproj", "{4AE51426-E665-4371-A392-3A1578445012}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-2c", "..\umba-2c\_prj_msvc\umba-2c.vcxproj", "{5E409EED-4A41-4430-BC4C-39DF7AEB7566}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4AE51426-E665-4371-A392-3A1578445012} = {4AE51426-E665-4371-A392-3A1578445012}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -198,6 +206,34 @@ Global
 		{3D6DF49F-B8E5-4149-BD3B-66D02D68C200}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|Win32
 		{3D6DF49F-B8E5-4149-BD3B-66D02D68C200}.RelWithDebInfo|x86.ActiveCfg = RelWithDebInfo|Win32
 		{3D6DF49F-B8E5-4149-BD3B-66D02D68C200}.RelWithDebInfo|x86.Build.0 = RelWithDebInfo|Win32
+		{4AE51426-E665-4371-A392-3A1578445012}.Debug|x64.ActiveCfg = Debug|x64
+		{4AE51426-E665-4371-A392-3A1578445012}.Debug|x64.Build.0 = Debug|x64
+		{4AE51426-E665-4371-A392-3A1578445012}.Debug|x86.ActiveCfg = Debug|Win32
+		{4AE51426-E665-4371-A392-3A1578445012}.Debug|x86.Build.0 = Debug|Win32
+		{4AE51426-E665-4371-A392-3A1578445012}.MinSizeRel|x64.ActiveCfg = MinSizeRel|x64
+		{4AE51426-E665-4371-A392-3A1578445012}.MinSizeRel|x64.Build.0 = MinSizeRel|x64
+		{4AE51426-E665-4371-A392-3A1578445012}.MinSizeRel|x86.ActiveCfg = MinSizeRel|x64
+		{4AE51426-E665-4371-A392-3A1578445012}.Release|x64.ActiveCfg = Release|x64
+		{4AE51426-E665-4371-A392-3A1578445012}.Release|x64.Build.0 = Release|x64
+		{4AE51426-E665-4371-A392-3A1578445012}.Release|x86.ActiveCfg = Release|Win32
+		{4AE51426-E665-4371-A392-3A1578445012}.Release|x86.Build.0 = Release|Win32
+		{4AE51426-E665-4371-A392-3A1578445012}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|Win32
+		{4AE51426-E665-4371-A392-3A1578445012}.RelWithDebInfo|x86.ActiveCfg = RelWithDebInfo|Win32
+		{4AE51426-E665-4371-A392-3A1578445012}.RelWithDebInfo|x86.Build.0 = RelWithDebInfo|Win32
+		{5E409EED-4A41-4430-BC4C-39DF7AEB7566}.Debug|x64.ActiveCfg = Debug|x64
+		{5E409EED-4A41-4430-BC4C-39DF7AEB7566}.Debug|x64.Build.0 = Debug|x64
+		{5E409EED-4A41-4430-BC4C-39DF7AEB7566}.Debug|x86.ActiveCfg = Debug|Win32
+		{5E409EED-4A41-4430-BC4C-39DF7AEB7566}.Debug|x86.Build.0 = Debug|Win32
+		{5E409EED-4A41-4430-BC4C-39DF7AEB7566}.MinSizeRel|x64.ActiveCfg = MinSizeRel|x64
+		{5E409EED-4A41-4430-BC4C-39DF7AEB7566}.MinSizeRel|x64.Build.0 = MinSizeRel|x64
+		{5E409EED-4A41-4430-BC4C-39DF7AEB7566}.MinSizeRel|x86.ActiveCfg = MinSizeRel|x64
+		{5E409EED-4A41-4430-BC4C-39DF7AEB7566}.Release|x64.ActiveCfg = Release|x64
+		{5E409EED-4A41-4430-BC4C-39DF7AEB7566}.Release|x64.Build.0 = Release|x64
+		{5E409EED-4A41-4430-BC4C-39DF7AEB7566}.Release|x86.ActiveCfg = Release|Win32
+		{5E409EED-4A41-4430-BC4C-39DF7AEB7566}.Release|x86.Build.0 = Release|Win32
+		{5E409EED-4A41-4430-BC4C-39DF7AEB7566}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|Win32
+		{5E409EED-4A41-4430-BC4C-39DF7AEB7566}.RelWithDebInfo|x86.ActiveCfg = RelWithDebInfo|Win32
+		{5E409EED-4A41-4430-BC4C-39DF7AEB7566}.RelWithDebInfo|x86.Build.0 = RelWithDebInfo|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

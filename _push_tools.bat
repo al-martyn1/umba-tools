@@ -1,4 +1,5 @@
 @cd ..
+@call :DO_JOB umba-2c
 @call :DO_JOB umba-brief-scanner
 @call :DO_JOB umba-enum-gen
 @call :DO_JOB umba-make-headers
