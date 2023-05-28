@@ -74,6 +74,7 @@ goto END
 @set ZIP_ROOT=%DISTR_ROOT%\%PLATFORM%\%CONFIGURATION%
 
 @mkdir %TARGET_ROOT%\bin
+@xcopy /Y /S /E /I /F /R  ..\umba-2c\_distr_conf\conf\*                                                 %TARGET_ROOT%\conf
 @xcopy /Y /S /E /I /F /R  ..\umba-brief-scanner\_distr_conf\conf\*                                      %TARGET_ROOT%\conf
 @xcopy /Y /S /E /I /F /R  ..\umba-enum-gen\_distr_conf\conf\*                                           %TARGET_ROOT%\conf
 @copy /Y                  ..\umba-pretty-headers\_distr_conf\conf\umba-pretty-headers.custom.options    %TARGET_ROOT%\conf\umba-pretty-headers.custom.options.example

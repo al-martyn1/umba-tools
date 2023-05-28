@@ -26,6 +26,7 @@ if exist %OUT_ROOT%\umba-tabtool.exe         copy /Y %OUT_ROOT%\umba-tabtool.exe
 if exist %OUT_ROOT%\umba-tr.exe              copy /Y %OUT_ROOT%\umba-tr.exe               %UMBA_TOOLS%\bin\
 
 
+@xcopy /Y /S /E /I /F /R ..\umba-2c\_distr_conf\conf\*                  %UMBA_TOOLS%\conf
 @xcopy /Y /S /E /I /F /R ..\umba-brief-scanner\_distr_conf\conf\*       %UMBA_TOOLS%\conf
 @xcopy /Y /S /E /I /F /R ..\umba-enum-gen\_distr_conf\conf\*            %UMBA_TOOLS%\conf
 @xcopy /Y /S /E /I /F /R ..\umba-pretty-headers\_distr_conf\conf\*      %UMBA_TOOLS%\conf
