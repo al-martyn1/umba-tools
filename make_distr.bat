@@ -82,6 +82,7 @@ goto END
 @copy /Y                  ..\umba-tabtool\_distr_conf\conf\umba-tabtool.options                         %TARGET_ROOT%\conf\umba-tabtool.options
 
 @copy %BUILD_OUTPUT%\umba-2c.exe                %TARGET_ROOT%\bin\umba-2c.exe
+@copy %BUILD_OUTPUT%\umba-2rcfs.exe             %TARGET_ROOT%\bin\umba-2rcfs.exe
 @copy %BUILD_OUTPUT%\umba-brief-scanner.exe     %TARGET_ROOT%\bin\umba-brief-scanner.exe
 @copy %BUILD_OUTPUT%\umba-enum-gen.exe          %TARGET_ROOT%\bin\umba-enum-gen.exe
 @copy %BUILD_OUTPUT%\umba-make-headers.exe      %TARGET_ROOT%\bin\umba-make-headers.exe
@@ -97,6 +98,7 @@ goto END
 @if not exist %TARGET_ROOT%\doc\cli-help    mkdir %TARGET_ROOT%\doc\cli-help
 
 %TARGET_ROOT%\bin\umba-2c.exe               --help >%TARGET_ROOT%\doc\cli-help\umba-2c.txt               || goto FAIL
+%TARGET_ROOT%\bin\umba-2rcfs.exe            --help >%TARGET_ROOT%\doc\cli-help\umba-2rcfs.txt            || goto FAIL
 %TARGET_ROOT%\bin\umba-brief-scanner.exe    --help >%TARGET_ROOT%\doc\cli-help\umba-brief-scanner.txt    || goto FAIL
 %TARGET_ROOT%\bin\umba-enum-gen.exe         --help >%TARGET_ROOT%\doc\cli-help\umba-enum-gen.txt         || goto FAIL
 %TARGET_ROOT%\bin\umba-make-headers.exe     --help >%TARGET_ROOT%\doc\cli-help\umba-make-headers.txt     || goto FAIL
