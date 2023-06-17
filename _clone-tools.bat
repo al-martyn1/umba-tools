@@ -13,6 +13,9 @@ if exist umba-2c\_libs\clone_libs_https.bat call umba-2c\_libs\clone_libs_https.
 if not exist umba-brief-scanner    git clone %PREFIX%/umba-brief-scanner.git
 if exist umba-brief-scanner\_libs\clone_libs_https.bat call umba-brief-scanner\_libs\clone_libs_https.bat
 
+if not exist umba-dll-proxy-gen    git clone %PREFIX%/umba-dll-proxy-gen.git
+if exist umba-dll-proxy-gen\_libs\clone_libs_https.bat call umba-dll-proxy-gen\_libs\clone_libs_https.bat
+
 if not exist umba-enum-gen         git clone %PREFIX%/umba-enum-gen.git
 if exist umba-enum-gen\_libs\clone_libs_https.bat call umba-enum-gen\_libs\clone_libs_https.bat
 

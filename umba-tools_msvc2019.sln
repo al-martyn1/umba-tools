@@ -16,6 +16,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "_all", "_prj_msvc2019\_all.
 		{713FF2D2-8367-4D28-B064-C27B383F34B5} = {713FF2D2-8367-4D28-B064-C27B383F34B5}
 		{E45FFEE8-2B5B-4AA5-9DCE-9F217E9814EB} = {E45FFEE8-2B5B-4AA5-9DCE-9F217E9814EB}
 		{5E409EED-4A41-4430-BC4C-39DF7AEB7566} = {5E409EED-4A41-4430-BC4C-39DF7AEB7566}
+		{BE6616F9-2BCC-43F1-91F0-A20D5A096980} = {BE6616F9-2BCC-43F1-91F0-A20D5A096980}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qt_stub", "..\umba-pretty-headers\_prj_msvc2019\qt_stub.vcxproj", "{7CA03583-0724-4FED-9A9E-6651F35E42A9}"
@@ -44,6 +45,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-2c", "..\umba-2c\_prj_
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-2rcfs", "..\umba-2c\_prj_msvc\umba-2rcfs.vcxproj", "{57BE0ACB-993A-4B0B-8714-EE5714B6EA4F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-dll-proxy-gen", "..\umba-dll-proxy-gen\_prj_msvc\umba-dll-proxy-gen.vcxproj", "{BE6616F9-2BCC-43F1-91F0-A20D5A096980}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -251,6 +254,20 @@ Global
 		{57BE0ACB-993A-4B0B-8714-EE5714B6EA4F}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|Win32
 		{57BE0ACB-993A-4B0B-8714-EE5714B6EA4F}.RelWithDebInfo|x86.ActiveCfg = RelWithDebInfo|Win32
 		{57BE0ACB-993A-4B0B-8714-EE5714B6EA4F}.RelWithDebInfo|x86.Build.0 = RelWithDebInfo|Win32
+		{BE6616F9-2BCC-43F1-91F0-A20D5A096980}.Debug|x64.ActiveCfg = Debug|x64
+		{BE6616F9-2BCC-43F1-91F0-A20D5A096980}.Debug|x64.Build.0 = Debug|x64
+		{BE6616F9-2BCC-43F1-91F0-A20D5A096980}.Debug|x86.ActiveCfg = Debug|Win32
+		{BE6616F9-2BCC-43F1-91F0-A20D5A096980}.Debug|x86.Build.0 = Debug|Win32
+		{BE6616F9-2BCC-43F1-91F0-A20D5A096980}.MinSizeRel|x64.ActiveCfg = MinSizeRel|x64
+		{BE6616F9-2BCC-43F1-91F0-A20D5A096980}.MinSizeRel|x64.Build.0 = MinSizeRel|x64
+		{BE6616F9-2BCC-43F1-91F0-A20D5A096980}.MinSizeRel|x86.ActiveCfg = MinSizeRel|x64
+		{BE6616F9-2BCC-43F1-91F0-A20D5A096980}.Release|x64.ActiveCfg = Release|x64
+		{BE6616F9-2BCC-43F1-91F0-A20D5A096980}.Release|x64.Build.0 = Release|x64
+		{BE6616F9-2BCC-43F1-91F0-A20D5A096980}.Release|x86.ActiveCfg = Release|Win32
+		{BE6616F9-2BCC-43F1-91F0-A20D5A096980}.Release|x86.Build.0 = Release|Win32
+		{BE6616F9-2BCC-43F1-91F0-A20D5A096980}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|Win32
+		{BE6616F9-2BCC-43F1-91F0-A20D5A096980}.RelWithDebInfo|x86.ActiveCfg = RelWithDebInfo|Win32
+		{BE6616F9-2BCC-43F1-91F0-A20D5A096980}.RelWithDebInfo|x86.Build.0 = RelWithDebInfo|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

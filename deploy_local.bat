@@ -18,6 +18,7 @@
 if exist %OUT_ROOT%\umba-2c.exe              copy /Y %OUT_ROOT%\umba-2c.exe               %UMBA_TOOLS%\bin\
 if exist %OUT_ROOT%\umba-2rcfs.exe           copy /Y %OUT_ROOT%\umba-2rcfs.exe            %UMBA_TOOLS%\bin\
 if exist %OUT_ROOT%\umba-brief-scanner.exe   copy /Y %OUT_ROOT%\umba-brief-scanner.exe    %UMBA_TOOLS%\bin\
+if exist %OUT_ROOT%\umba-dll-proxy-gen.exe   copy /Y %OUT_ROOT%\umba-dll-proxy-gen.exe    %UMBA_TOOLS%\bin\
 if exist %OUT_ROOT%\umba-enum-gen.exe        copy /Y %OUT_ROOT%\umba-enum-gen.exe         %UMBA_TOOLS%\bin\
 if exist %OUT_ROOT%\umba-make-headers.exe    copy /Y %OUT_ROOT%\umba-make-headers.exe     %UMBA_TOOLS%\bin\
 if exist %OUT_ROOT%\umba-pretty-headers.exe  copy /Y %OUT_ROOT%\umba-pretty-headers.exe   %UMBA_TOOLS%\bin\
