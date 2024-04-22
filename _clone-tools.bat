@@ -24,6 +24,9 @@ if not exist umba-make-headers     git clone %PREFIX%/umba-make-headers.git
 if not exist umba-md               git clone %PREFIX%/umba-md.git
 if exist umba-md\_libs\clone_libs_https.bat call umba-md\_libs\clone_libs_https.bat
 
+if not exist umba-md-pp            git clone %PREFIX%/umba-md-pp.git
+if exist umba-md-pp\_libs\clone_libs_https.bat call umba-md-pp\_libs\clone_libs_https.bat
+
 if not exist umba-pretty-headers   git clone %PREFIX%/umba-pretty-headers.git
 if exist umba-pretty-headers\_libs\clone_libs_https.bat call umba-pretty-headers\_libs\clone_libs_https.bat
 
