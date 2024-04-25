@@ -77,6 +77,7 @@ goto END
 @xcopy /Y /S /E /I /F /R  ..\umba-2c\_distr_conf\conf\*                                                 %TARGET_ROOT%\conf
 @xcopy /Y /S /E /I /F /R  ..\umba-brief-scanner\_distr_conf\conf\*                                      %TARGET_ROOT%\conf
 @xcopy /Y /S /E /I /F /R  ..\umba-enum-gen\_distr_conf\conf\*                                           %TARGET_ROOT%\conf
+@xcopy /Y /S /E /I /F /R  ..\umba-md-pp\_distr_conf\conf\*                                              %TARGET_ROOT%\conf
 @copy /Y                  ..\umba-pretty-headers\_distr_conf\conf\umba-pretty-headers.custom.options    %TARGET_ROOT%\conf\umba-pretty-headers.custom.options.example
 @copy /Y                  ..\umba-sort-headers\_distr_conf\conf\umba-sort-headers.options               %TARGET_ROOT%\conf\umba-sort-headers.options
 @copy /Y                  ..\umba-tabtool\_distr_conf\conf\umba-tabtool.options                         %TARGET_ROOT%\conf\umba-tabtool.options
@@ -87,6 +88,7 @@ goto END
 @copy %BUILD_OUTPUT%\umba-dll-proxy-gen.exe     %TARGET_ROOT%\bin\umba-dll-proxy-gen.exe
 @copy %BUILD_OUTPUT%\umba-enum-gen.exe          %TARGET_ROOT%\bin\umba-enum-gen.exe
 @copy %BUILD_OUTPUT%\umba-make-headers.exe      %TARGET_ROOT%\bin\umba-make-headers.exe
+@copy %BUILD_OUTPUT%\umba-md-pp.exe             %TARGET_ROOT%\bin\umba-md-pp.exe
 @copy %BUILD_OUTPUT%\umba-pretty-headers.exe    %TARGET_ROOT%\bin\umba-pretty-headers.exe
 @copy %BUILD_OUTPUT%\umba-sort-headers.exe      %TARGET_ROOT%\bin\umba-sort-headers.exe
 @copy %BUILD_OUTPUT%\umba-subst-macros.exe      %TARGET_ROOT%\bin\umba-subst-macros.exe
@@ -98,17 +100,18 @@ goto END
 @if not exist %TARGET_ROOT%\doc             mkdir %TARGET_ROOT%\doc
 @if not exist %TARGET_ROOT%\doc\cli-help    mkdir %TARGET_ROOT%\doc\cli-help
 
-%TARGET_ROOT%\bin\umba-2c.exe               --help >%TARGET_ROOT%\doc\cli-help\umba-2c.txt               || goto FAIL
-%TARGET_ROOT%\bin\umba-2rcfs.exe            --help >%TARGET_ROOT%\doc\cli-help\umba-2rcfs.txt            || goto FAIL
-%TARGET_ROOT%\bin\umba-brief-scanner.exe    --help >%TARGET_ROOT%\doc\cli-help\umba-brief-scanner.txt    || goto FAIL
-@rem %TARGET_ROOT%\bin\umba-dll-proxy-gen.exe    --help >%TARGET_ROOT%\doc\cli-help\umba-dll-proxy-gen.txt    || goto FAIL
-%TARGET_ROOT%\bin\umba-enum-gen.exe         --help >%TARGET_ROOT%\doc\cli-help\umba-enum-gen.txt         || goto FAIL
-%TARGET_ROOT%\bin\umba-make-headers.exe     --help >%TARGET_ROOT%\doc\cli-help\umba-make-headers.txt     || goto FAIL
-%TARGET_ROOT%\bin\umba-pretty-headers.exe   --help >%TARGET_ROOT%\doc\cli-help\umba-pretty-headers.txt   || goto FAIL
-%TARGET_ROOT%\bin\umba-sort-headers.exe     --help >%TARGET_ROOT%\doc\cli-help\umba-sort-headers.txt     || goto FAIL
-%TARGET_ROOT%\bin\umba-subst-macros.exe     --help >%TARGET_ROOT%\doc\cli-help\umba-subst-macros.txt     || goto FAIL
-%TARGET_ROOT%\bin\umba-tabtool.exe          --help >%TARGET_ROOT%\doc\cli-help\umba-tabtool.txt          || goto FAIL
-%TARGET_ROOT%\bin\umba-tr.exe               --help >%TARGET_ROOT%\doc\cli-help\umba-tr.txt               || goto FAIL
+%TARGET_ROOT%\bin\umba-2c.exe               --help >%TARGET_ROOT%\doc\cli-help\umba-2c.txt                   || goto FAIL
+%TARGET_ROOT%\bin\umba-2rcfs.exe            --help >%TARGET_ROOT%\doc\cli-help\umba-2rcfs.txt                || goto FAIL
+%TARGET_ROOT%\bin\umba-brief-scanner.exe    --help >%TARGET_ROOT%\doc\cli-help\umba-brief-scanner.txt        || goto FAIL
+@rem %TARGET_ROOT%\bin\umba-dll-proxy-gen.exe    --help >%TARGET_ROOT%\doc\cli-help\umba-dll-proxy-gen.txt   || goto FAIL
+%TARGET_ROOT%\bin\umba-enum-gen.exe         --help >%TARGET_ROOT%\doc\cli-help\umba-enum-gen.txt             || goto FAIL
+%TARGET_ROOT%\bin\umba-make-headers.exe     --help >%TARGET_ROOT%\doc\cli-help\umba-make-headers.txt         || goto FAIL
+%TARGET_ROOT%\bin\umba-md-pp.exe            --help >%TARGET_ROOT%\doc\cli-help\umba-md-pp.txt                || goto FAIL
+%TARGET_ROOT%\bin\umba-pretty-headers.exe   --help >%TARGET_ROOT%\doc\cli-help\umba-pretty-headers.txt       || goto FAIL
+%TARGET_ROOT%\bin\umba-sort-headers.exe     --help >%TARGET_ROOT%\doc\cli-help\umba-sort-headers.txt         || goto FAIL
+%TARGET_ROOT%\bin\umba-subst-macros.exe     --help >%TARGET_ROOT%\doc\cli-help\umba-subst-macros.txt         || goto FAIL
+%TARGET_ROOT%\bin\umba-tabtool.exe          --help >%TARGET_ROOT%\doc\cli-help\umba-tabtool.txt              || goto FAIL
+%TARGET_ROOT%\bin\umba-tr.exe               --help >%TARGET_ROOT%\doc\cli-help\umba-tr.txt                   || goto FAIL
 @if exist doc\umba-tools-brief-ru.txt       copy /Y doc\umba-tools-brief-ru.txt %TARGET_ROOT%\doc\umba-tools-brief-ru.txt
 @if exist doc\umba-tools-brief-en.txt       copy /Y doc\umba-tools-brief-en.txt %TARGET_ROOT%\doc\umba-tools-brief-en.txt
 
