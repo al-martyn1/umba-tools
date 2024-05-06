@@ -89,6 +89,7 @@ goto END
 @copy %BUILD_OUTPUT%\umba-enum-gen.exe          %TARGET_ROOT%\bin\umba-enum-gen.exe
 @copy %BUILD_OUTPUT%\umba-make-headers.exe      %TARGET_ROOT%\bin\umba-make-headers.exe
 @copy %BUILD_OUTPUT%\umba-md-pp.exe             %TARGET_ROOT%\bin\umba-md-pp.exe
+@copy %BUILD_OUTPUT%\umba-md-pp-view.exe        %TARGET_ROOT%\bin\umba-md-pp-view.exe
 @copy %BUILD_OUTPUT%\umba-pretty-headers.exe    %TARGET_ROOT%\bin\umba-pretty-headers.exe
 @copy %BUILD_OUTPUT%\umba-sort-headers.exe      %TARGET_ROOT%\bin\umba-sort-headers.exe
 @copy %BUILD_OUTPUT%\umba-subst-macros.exe      %TARGET_ROOT%\bin\umba-subst-macros.exe

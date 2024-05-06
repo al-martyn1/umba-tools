@@ -22,6 +22,7 @@ if exist %OUT_ROOT%\umba-dll-proxy-gen.exe   copy /Y %OUT_ROOT%\umba-dll-proxy-g
 if exist %OUT_ROOT%\umba-enum-gen.exe        copy /Y %OUT_ROOT%\umba-enum-gen.exe         %UMBA_TOOLS%\bin\
 if exist %OUT_ROOT%\umba-make-headers.exe    copy /Y %OUT_ROOT%\umba-make-headers.exe     %UMBA_TOOLS%\bin\
 if exist %OUT_ROOT%\umba-md-pp.exe           copy /Y %OUT_ROOT%\umba-md-pp.exe            %UMBA_TOOLS%\bin\
+if exist %OUT_ROOT%\umba-md-pp-view.exe      copy /Y %OUT_ROOT%\umba-md-pp-view.exe       %UMBA_TOOLS%\bin\
 if exist %OUT_ROOT%\umba-pretty-headers.exe  copy /Y %OUT_ROOT%\umba-pretty-headers.exe   %UMBA_TOOLS%\bin\
 if exist %OUT_ROOT%\umba-sort-headers.exe    copy /Y %OUT_ROOT%\umba-sort-headers.exe     %UMBA_TOOLS%\bin\
 if exist %OUT_ROOT%\umba-subst-macros.exe    copy /Y %OUT_ROOT%\umba-subst-macros.exe     %UMBA_TOOLS%\bin\
