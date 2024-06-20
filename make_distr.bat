@@ -146,17 +146,25 @@ set CLANG_INCLUDE=G:\llvm-built\msvc2019\x64\Release\lib\clang\13.0.1\include
 @set ZIPDISTRNAME=%DISTR_NAME%_windows_%PLATFORM%_%LCCONFIGURATION%_%VERSION%.zip
 @echo Zip: %ZIPDISTRNAME%
 
+@set ZIP=7z
+@rem https://documentation.help/7-Zip-18.0/type.htm
+@rem 7z: -t{archive_type}[:s{Size}][:r][:e][:a]
+@rem 7z: *, #, 7z, xz, split, zip, gzip, bzip2, tar
+
 @set ZIP_TARGET_FOLDER=%TARGET_ROOT%\..
 @echo ZIP_TARGET_FOLDER: %ZIP_TARGET_FOLDER%
-@rem Be good zip %DISTR_ROOT%\%ZIPDISTRNAME% -r %ZIP_TARGET_FOLDER%.zip %TARGET_ROOT%
-@rem zip %ZIP_ROOT%\%ZIPDISTRNAME% -r %ZIP_TARGET_FOLDER%.zip %TARGET_ROOT%
+@rem Be good %ZIP% a -r %DISTR_ROOT%\%ZIPDISTRNAME% %ZIP_TARGET_FOLDER%.zip %TARGET_ROOT%
+@rem %ZIP% %ZIP_ROOT%\%ZIPDISTRNAME% -r %ZIP_TARGET_FOLDER%.zip %TARGET_ROOT%
 @cd %ZIP_TARGET_FOLDER%
-@echo Calling ZIP: zip %ZIPDISTRNAME% -r %ZIPDISTRNAME% %DISTR_NAME%
-@zip %ZIPDISTRNAME% -r %ZIPDISTRNAME% %DISTR_NAME%
+@echo Working dir
+@cd
+@echo Calling ZIP: %ZIP% a -tzip -r %ZIPDISTRNAME% %DISTR_NAME%
+@%ZIP% a -tzip -r %ZIPDISTRNAME% %DISTR_NAME%
 @move %ZIPDISTRNAME% ..\..
 @cd ..\..\..
 @rem echo RD_ROOT = %RD_ROOT%
 @rd /S /Q %RD_ROOT%
+@if exist ..\releases copy /Y /B .distr\%ZIPDISTRNAME% ..\releases\%ZIPDISTRNAME%
 
 @exit /b
 
