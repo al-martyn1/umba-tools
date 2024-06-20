@@ -21,34 +21,34 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "_all", ".msvc2019\_all.vcxp
 		{BE6616F9-2BCC-43F1-91F0-A20D5A096980} = {BE6616F9-2BCC-43F1-91F0-A20D5A096980}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qt_stub", "..\umba-pretty-headers\_prj_msvc2019\qt_stub.vcxproj", "{7CA03583-0724-4FED-9A9E-6651F35E42A9}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-brief-scanner", "..\umba-brief-scanner\.msvc2019\umba-brief-scanner.vcxproj", "{713FF2D2-8367-4D28-B064-C27B383F34B5}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-brief-scanner", "..\umba-brief-scanner\_prj_msvc2019\umba-brief-scanner.vcxproj", "{713FF2D2-8367-4D28-B064-C27B383F34B5}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qt_stub", "..\umba-pretty-headers\.msvc2019\qt_stub.vcxproj", "{7CA03583-0724-4FED-9A9E-6651F35E42A9}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-make-headers", "..\umba-pretty-headers\_prj_msvc2019\umba-make-headers.vcxproj", "{E45FFEE8-2B5B-4AA5-9DCE-9F217E9814EB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-make-headers", "..\umba-pretty-headers\.msvc2019\umba-make-headers.vcxproj", "{E45FFEE8-2B5B-4AA5-9DCE-9F217E9814EB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-pretty-headers", "..\umba-pretty-headers\_prj_msvc2019\umba-pretty-headers.vcxproj", "{3825DE06-1F52-47E6-B01D-59857A33647E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-pretty-headers", "..\umba-pretty-headers\.msvc2019\umba-pretty-headers.vcxproj", "{3825DE06-1F52-47E6-B01D-59857A33647E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-subst-macros", "..\umba-subst-macros\_prj_msvc2019\umba-subst-macros.vcxproj", "{102914CC-76E5-4B00-A271-B9C50B312C54}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-subst-macros", "..\umba-subst-macros\.msvc2019\umba-subst-macros.vcxproj", "{102914CC-76E5-4B00-A271-B9C50B312C54}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-sort-headers", "..\umba-sort-headers\_prj_msvc\umba-sort-headers.vcxproj", "{4EE451A1-0029-4A58-AE47-48BC8E2C27B5}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-sort-headers", "..\umba-sort-headers\.msvc2019\umba-sort-headers.vcxproj", "{4EE451A1-0029-4A58-AE47-48BC8E2C27B5}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-tabtool", "..\umba-tabtool\_prj_msvc\umba-tabtool.vcxproj", "{5F88E9C5-2180-4D61-ACA9-A40AC2766220}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-tabtool", "..\umba-tabtool\.msvc2019\umba-tabtool.vcxproj", "{5F88E9C5-2180-4D61-ACA9-A40AC2766220}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-enum-gen", "..\umba-enum-gen\_prj_msvc\umba-enum-gen.vcxproj", "{44E9429A-16F8-46A3-8A34-2382214D8D60}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-enum-gen", "..\umba-enum-gen\.msvc2019\umba-enum-gen.vcxproj", "{44E9429A-16F8-46A3-8A34-2382214D8D60}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-tr", "..\umba-tr\_prj_msvc\umba-tr.vcxproj", "{3D6DF49F-B8E5-4149-BD3B-66D02D68C200}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-tr", "..\umba-tr\.msvc2019\umba-tr.vcxproj", "{3D6DF49F-B8E5-4149-BD3B-66D02D68C200}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "..\umba-2c\_prj_msvc\zlib.vcxproj", "{4AE51426-E665-4371-A392-3A1578445012}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "..\umba-2c\.msvc2019\zlib.vcxproj", "{4AE51426-E665-4371-A392-3A1578445012}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-2c", "..\umba-2c\_prj_msvc\umba-2c.vcxproj", "{5E409EED-4A41-4430-BC4C-39DF7AEB7566}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-2c", "..\umba-2c\.msvc2019\umba-2c.vcxproj", "{5E409EED-4A41-4430-BC4C-39DF7AEB7566}"
 	ProjectSection(ProjectDependencies) = postProject
 		{4AE51426-E665-4371-A392-3A1578445012} = {4AE51426-E665-4371-A392-3A1578445012}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-2rcfs", "..\umba-2c\_prj_msvc\umba-2rcfs.vcxproj", "{57BE0ACB-993A-4B0B-8714-EE5714B6EA4F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-2rcfs", "..\umba-2c\.msvc2019\umba-2rcfs.vcxproj", "{57BE0ACB-993A-4B0B-8714-EE5714B6EA4F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-dll-proxy-gen", "..\umba-dll-proxy-gen\_prj_msvc\umba-dll-proxy-gen.vcxproj", "{BE6616F9-2BCC-43F1-91F0-A20D5A096980}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-dll-proxy-gen", "..\umba-dll-proxy-gen\.msvc2019\umba-dll-proxy-gen.vcxproj", "{BE6616F9-2BCC-43F1-91F0-A20D5A096980}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umba-md-pp", "..\umba-md-pp\.msvc2019\umba-md-pp.vcxproj", "{DB0E26F8-B2E1-48D9-90C8-CC4A96393F1A}"
 	ProjectSection(ProjectDependencies) = postProject
