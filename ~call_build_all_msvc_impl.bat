@@ -32,12 +32,14 @@ set BUILD_BAT_NAME=_build_all_%TOOLSET%.bat
 
 @for /F %%i in ('dir /B /A:D') do @(
     @echo Looking for: %~dp0\..\%%i\%BUILD_BAT_NAME%
-    @if exist %~dp0\..\%%i\%BUILD_BAT_NAME% ( @echo Script found && @cd %~dp0\..\%%i && @call %BUILD_BAT_NAME% && @cd %~dp0\.. )
-    @if ERRORLEVEL 1 goto ERR_GO_BACK
-    @if exist %~dp0\..\%%i\.out\\%TOOLSET%\\x86\Release\*.exe  @copy /B /Y %~dp0\..\%%i\.out\\%TOOLSET%\\x86\Release\*.exe  %~dp0\.out\%TOOLSET%\x86\Release
-    @if exist %~dp0\..\%%i\.out\\%TOOLSET%\\x86\Debug\*.exe    @copy /B /Y %~dp0\..\%%i\.out\\%TOOLSET%\\x86\Debug\*.exe    %~dp0\.out\%TOOLSET%\x86\Debug  
-    @if exist %~dp0\..\%%i\.out\\%TOOLSET%\\x64\Release\*.exe  @copy /B /Y %~dp0\..\%%i\.out\\%TOOLSET%\\x64\Release\*.exe  %~dp0\.out\%TOOLSET%\x64\Release
-    @if exist %~dp0\..\%%i\.out\\%TOOLSET%\\x64\Debug\*.exe    @copy /B /Y %~dp0\..\%%i\.out\\%TOOLSET%\\x64\Debug\*.exe    %~dp0\.out\%TOOLSET%\x64\Debug  
+    @if exist %~dp0\..\%%i\%BUILD_BAT_NAME% @(
+    @echo Script found && @cd %~dp0\..\%%i && @call %BUILD_BAT_NAME% && @cd %~dp0\..
+        @if ERRORLEVEL 1 goto ERR_GO_BACK
+        if exist %~dp0\..\%%i\.out\\%TOOLSET%\\x86\Release\*.exe  copy /B /Y %~dp0\..\%%i\.out\\%TOOLSET%\\x86\Release\*.exe  %~dp0\.out\%TOOLSET%\x86\Release
+        if exist %~dp0\..\%%i\.out\\%TOOLSET%\\x86\Debug\*.exe    copy /B /Y %~dp0\..\%%i\.out\\%TOOLSET%\\x86\Debug\*.exe    %~dp0\.out\%TOOLSET%\x86\Debug  
+        if exist %~dp0\..\%%i\.out\\%TOOLSET%\\x64\Release\*.exe  copy /B /Y %~dp0\..\%%i\.out\\%TOOLSET%\\x64\Release\*.exe  %~dp0\.out\%TOOLSET%\x64\Release
+        if exist %~dp0\..\%%i\.out\\%TOOLSET%\\x64\Debug\*.exe    copy /B /Y %~dp0\..\%%i\.out\\%TOOLSET%\\x64\Debug\*.exe    %~dp0\.out\%TOOLSET%\x64\Debug  
+    )
 )
 
 :ERR
