@@ -27,6 +27,9 @@ if exist umba-md\_libs\clone_libs_https.bat call umba-md\_libs\clone_libs_https.
 if not exist umba-md-pp            git clone %PREFIX%/umba-md-pp.git
 if exist umba-md-pp\_libs\clone_libs_https.bat call umba-md-pp\_libs\clone_libs_https.bat
 
+if not exist umba-msvc-filters     git clone %PREFIX%/umba-msvc-filters.git
+if exist umba-msvc-filters\_libs\clone_libs_https.bat call umba-msvc-filters\_libs\clone_libs_https.bat
+
 if not exist umba-pretty-headers   git clone %PREFIX%/umba-pretty-headers.git
 if exist umba-pretty-headers\_libs\clone_libs_https.bat call umba-pretty-headers\_libs\clone_libs_https.bat
 
