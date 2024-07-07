@@ -6,7 +6,7 @@
 @call :DO_JOB umba-make-headers
 @call :DO_JOB umba-md
 @call :DO_JOB umba-md-pp
-@call :DO_JOB umba-msvc-filters
+@rem call :DO_JOB umba-msvc-filters
 @call :DO_JOB umba-pretty-headers
 @call :DO_JOB umba-sort-headers
 @call :DO_JOB umba-subst-macros
@@ -24,6 +24,7 @@
 @cd %1
 @echo Updating %1 tool main sources
 @git pull
+@if exist _update_modules_from_remote.bat @call _update_modules_from_remote.bat
 @if not exist _libs goto DONE_UP1
 @if not exist _libs\update_libs.bat goto DONE_UP1
 @echo Updating %1 tool libs
