@@ -36,3 +36,4 @@
 /.vs
 /*.log
 /.build
+*.user

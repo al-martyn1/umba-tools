@@ -14,8 +14,12 @@ set(LIB_ROOT "${PRJ_ROOT}/_libs")
 set(SUBPROJECTS_ROOT "${PRJ_ROOT}/..")
 
 
-include_directories(${LIB_ROOT})
+# include_directories(${LIB_ROOT})
 
-add_subdirectory(${SUBPROJECTS_ROOT}/umba-md-pp ".out")
+add_subdirectory(${SUBPROJECTS_ROOT}/umba-brief-scanner "all")
+add_subdirectory(${SUBPROJECTS_ROOT}/umba-fsm "all")
+add_subdirectory(${SUBPROJECTS_ROOT}/umba-hcp "all")
+add_subdirectory(${SUBPROJECTS_ROOT}/umba-subst-macros "all")
+add_subdirectory(${SUBPROJECTS_ROOT}/umba-md-pp "all")
 # add_subdirectory(${SUBPROJECTS_ROOT}/umba-msvc-filters ".out")
 

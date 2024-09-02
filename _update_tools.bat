@@ -1,8 +1,12 @@
+@set NO_PULL_SUBMODULES=%1
+
 @cd ..
 @call :DO_JOB umba-2c
 @call :DO_JOB umba-brief-scanner
 @call :DO_JOB umba-dll-proxy-gen
 @call :DO_JOB umba-enum-gen
+@call :DO_JOB umba-fsm
+@call :DO_JOB umba-hcp
 @call :DO_JOB umba-make-headers
 @call :DO_JOB umba-md
 @call :DO_JOB umba-md-pp
@@ -16,12 +20,14 @@
 @exit /B
 
 
+
 :DO_JOB
 @echo Updating %1
 @set "CUR_PATH=%cd%"
 @rem echo Current path: %CUR_PATH%
 @if not exist %1 goto DONE
 @cd %1
+@if exist _update_all.bat @goto CALL_UPDATE_ALL
 @echo Updating %1 tool main sources
 @git pull
 @if exist _update_modules_from_remote.bat @call _update_modules_from_remote.bat
@@ -33,6 +39,12 @@
 @cd _libs
 @call update_libs.bat
 @goto DONE_UP2
+
+:CALL_UPDATE_ALL
+@echo Calling _update_all.bat
+@call _update_all.bat %NO_PULL_SUBMODULES%
+@cd ..
+@goto DONE
 
 
 :DONE_UP3
